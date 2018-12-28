@@ -6,9 +6,16 @@ else:
 	print "Missing Parameter"
 	sys.exit(0)
 if do == "-e":
+	print "Press Ctrl+D to finish"
 	print "                   Enter Message"
 	print "#########################################################"
-	text = raw_input("")
+	while True:
+		try:
+			text = raw_input("")
+		except EOFError:
+			break
+	
+		
 	print
 	print "                      OUTPUT    "
 	print "#########################################################\n"
@@ -23,10 +30,15 @@ if do == "-e":
 		#		print 
 
 	print "\n\n#########################################################"
-if do == "-d":
+elif do == "-d":
+	print "Press Ctrl+D to finish"
 	print "                   Enter Binary"
 	print "#########################################################"
-	text = raw_input("")
+	while True:
+		try:
+			text = raw_input("")
+		except EOFError:
+			break
 	print
 	print "                      OUTPUT    "
 	print "#########################################################\n"
